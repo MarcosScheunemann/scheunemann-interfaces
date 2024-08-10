@@ -1,8 +1,9 @@
 import { EDocType, IAddress } from '../../general';
-import { ICustomer } from '../interfaces';
+import { ISubscriptionCustomer } from '../../subscription-customer';
+import { ECustomerStatus } from '../enums';
+import { ICustomerIbChain } from '../interfaces';
 
-export class CustomerEntity implements ICustomer {
-  
+export class CustomerEntity implements ICustomerIbChain {
   sandbox: boolean = false;
   address: IAddress | null = null;
   createdAt: Date = new Date();
@@ -21,6 +22,10 @@ export class CustomerEntity implements ICustomer {
   phoneNumberVerified?: boolean | undefined = false;
   phoneNumberVerifiedAt?: Date | null | undefined = null;
   phoneNumbersNotification?: string[] | undefined = [];
+  blockedReason: string | null = null;
+  status: ECustomerStatus = ECustomerStatus.ACTIVE;
+  subscriptionId: string | null = null;
+  subscription: ISubscriptionCustomer | null = null;
 
   constructor(data?: Partial<CustomerEntity>) {
     if (data) {
