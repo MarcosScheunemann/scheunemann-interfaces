@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "module": "commonjs",
+        "paths": {
+            "@company/*": [
+                "company/*"
+            ],
+            "@device/*": [
+                "device/*"
+            ],
+            "@general/*": [
+                "general/*"
+            ],
+            "@purchase/*": [
+                "purchase/*"
+            ]
+        },
+        "target": "es6",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "strict": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
