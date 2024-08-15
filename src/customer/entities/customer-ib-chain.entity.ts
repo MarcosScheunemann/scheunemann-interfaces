@@ -3,7 +3,7 @@ import { ISubscriptionCustomer } from '../../subscription-customer';
 import { ECustomerStatus } from '../enums';
 import { ICustomerIbChain } from '../interfaces';
 
-export class CustomerEntity implements ICustomerIbChain {
+export class CustomerIbChainEntity implements ICustomerIbChain {
   sandbox: boolean = false;
   address: IAddress | null = null;
   createdAt: Date = new Date();
@@ -27,7 +27,7 @@ export class CustomerEntity implements ICustomerIbChain {
   subscriptionId: string | null = null;
   subscription: ISubscriptionCustomer | null = null;
 
-  constructor(data?: Partial<CustomerEntity>) {
+  constructor(data?: Partial<CustomerIbChainEntity>) {
     if (data) {
       for (let key in data) {
         if (data.hasOwnProperty(key) && key in this) {

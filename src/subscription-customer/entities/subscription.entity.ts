@@ -1,4 +1,4 @@
-import { ECustomerInterval } from '../../customer';
+import { EIntervalType } from '../../general';
 import { IInvoice } from '../../invoice';
 import { SubscriptionBaseEntity } from '../../subscription-base';
 import { ISubscriptionCustomer } from '../interfaces/i-subscription';
@@ -10,10 +10,10 @@ export class SubscriptionCustomerEntity extends SubscriptionBaseEntity implement
 
   public customerCreditLimit: CustomerCreditLimitEntity[] = [];
   public customerId: string | null = null;
-  public customerInterval: ECustomerInterval = ECustomerInterval.MONTHLY;
   public openedInvoices: IInvoice[] = [];
   public preferedDueDate: number = 7;
   public profile: SubscriptionCustomerProfileEntity = new SubscriptionCustomerProfileEntity();
+  public customerInterval: EIntervalType =EIntervalType.MONTHS;
 
   // #endregion Properties (9)
 

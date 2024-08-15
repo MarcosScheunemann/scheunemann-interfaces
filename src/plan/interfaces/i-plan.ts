@@ -22,6 +22,4 @@ export interface IPlan {
 
   price: number;
   updatedAt: Date;
-
-  // #endregion Properties (10)
 }

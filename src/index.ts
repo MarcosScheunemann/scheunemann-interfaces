@@ -51,3 +51,4 @@ export * from './wa-server';
 export * from './withdraw';
 export * from './logss';
 export * from './sponsor';
+export * from './master-setting';
