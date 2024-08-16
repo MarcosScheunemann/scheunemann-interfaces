@@ -1,11 +1,7 @@
 export interface ICustomerInfo {
-    // #region Properties (9)
-
-    tokenId: string;
-    userEmail: string;
-    userName: string;
-    userPhoneNumber: string;
-    userPhotoUrl: string;
-
-    // #endregion Properties (9)
+    customerId: string
+    tokenId: string | null;
+    name: string | null;
+    email: string | null;
+    phoneNumber: string | null;
 }

@@ -1,3 +1,4 @@
+import { ICustomer } from '../../customer';
 import { TokenEntity } from '../../token';
 import { ICustomerInfo } from '../interfaces/i-customer-info';
 
@@ -6,17 +7,15 @@ export class CustomerInfoEntity implements ICustomerInfo {
 
     public tokenId: string = '';
     public customerId: string = '';
-    public userEmail: string = '';
-    public userName: string = '';
-    public userPhoneNumber: string = '';
-    public userPhotoUrl: string = '';
+    public name: string | null = '';
+    public email: string | null = '';
+    public phoneNumber: string | null = '';
 
-    constructor(req: TokenEntity | null) {
-        this.customerId = req?.customerId || '';
+    constructor(req?: TokenEntity | null) {
         this.tokenId = req?.id ||'';
-        this.userEmail = '';
-        this.userPhotoUrl = '';
-        this.userPhoneNumber = '';
-        this.userName = '';
+        this.customerId = req?.customerId || '';
+        this.name = req?.companyName || '';
+        this.email = '';
+        this.phoneNumber = '';
     }
 }
