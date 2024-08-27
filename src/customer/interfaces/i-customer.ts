@@ -1,4 +1,5 @@
 import { EDocType, IAddress } from '../../general';
+import { EMemberType } from '../../member';
 
 export interface ICustomer {
   sandbox: boolean;
@@ -14,10 +15,9 @@ export interface ICustomer {
   name: string;
   tags: string[];
   updatedAt: Date;
-
+  type: EMemberType;
   emailVerified?: boolean;
   emailVerifiedAt?: Date | null;
-  
   phoneNumberVerified?: boolean;
   phoneNumberVerifiedAt?: Date | null;
   phoneNumbersNotification?: string[];

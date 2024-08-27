@@ -1,4 +1,5 @@
 import { EDocType, IAddress } from '../../general';
+import { EMemberType } from '../../member';
 import { ICustomer } from '../interfaces';
 
 export class CustomerEntity implements ICustomer {
@@ -21,6 +22,7 @@ export class CustomerEntity implements ICustomer {
   phoneNumberVerified?: boolean | undefined = false;
   phoneNumberVerifiedAt?: Date | null | undefined = null;
   phoneNumbersNotification?: string[] | undefined = [];
+  type: EMemberType = EMemberType.CUSTOMER;
 
   constructor(data?: Partial<CustomerEntity>) {
     if (data) {

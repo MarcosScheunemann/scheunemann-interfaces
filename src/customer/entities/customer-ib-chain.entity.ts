@@ -1,4 +1,5 @@
 import { EDocType, IAddress } from '../../general';
+import { EMemberType } from '../../member';
 import { ISubscriptionCustomer } from '../../subscription-customer';
 import { ECustomerStatus } from '../enums';
 import { ICustomerIbChain } from '../interfaces';
@@ -26,6 +27,7 @@ export class CustomerIbChainEntity implements ICustomerIbChain {
   status: ECustomerStatus = ECustomerStatus.ACTIVE;
   subscriptionId: string | null = null;
   subscription: ISubscriptionCustomer | null = null;
+  type: EMemberType = EMemberType.ADMIN;
 
   constructor(data?: Partial<CustomerIbChainEntity>) {
     if (data) {
@@ -37,5 +39,4 @@ export class CustomerIbChainEntity implements ICustomerIbChain {
     }
   }
 
-  // #endregion Constructors (1)
 }

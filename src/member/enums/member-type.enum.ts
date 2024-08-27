@@ -1,4 +1,4 @@
-export enum MemberTypeEnum {
+export enum EMemberType {
   PARTNER = 'PARTNER',
   ADMIN = 'ADMIN',
   CLIENT = 'CLIENT',
