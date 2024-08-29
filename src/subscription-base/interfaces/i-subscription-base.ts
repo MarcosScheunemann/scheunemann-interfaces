@@ -5,8 +5,6 @@ import { ISubscriptionBaseItem } from './i-subscription-base-item';
 import { ISubscriptionBaseLog } from './i-subscription-base-log';
 
 export interface ISubscriptionBase {
-  // #region Properties (23)
-
   amount: number;
   cancellationReason: string;
   createdAt: Date;
@@ -19,17 +17,11 @@ export interface ISubscriptionBase {
   items: ISubscriptionBaseItem[];
   logs: ISubscriptionBaseLog[];
   notes: string;
-  payment: IPayment;
-  paymentType: EPaymentType;
-  phoneNumbersNotification: string[];
-  recentInvoices: IInvoice[];
-  renewPaymentDate: Date;
-  renovatedAt: Date;
+  phoneNumbersNotification?: string[];
+  recentInvoices?: IInvoice[];
   startsAt: Date;
   status: ESubscriptionStatus;
-  suspendedTimes: number;
   tags: string[];
   updatedAt: Date;
-
-  // #endregion Properties (23)
+  suspendedTimes?: number;
 }

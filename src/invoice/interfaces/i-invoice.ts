@@ -9,8 +9,6 @@ import { IInvoicePayer } from './i-invoice-payer';
 import { IInvoicePix } from './i-invoice-pix';
 
 export interface IInvoice {
-  // #region Properties (43)
-
   addition: number;
   bankSlip: IInvoiceBankSlip | null;
   bankSlipExtraDue: number;
@@ -54,6 +52,4 @@ export interface IInvoice {
   totalPaid: number;
   totalRefunded: number;
   updatedAt: Date;
-
-  // #endregion Properties (43)
 }

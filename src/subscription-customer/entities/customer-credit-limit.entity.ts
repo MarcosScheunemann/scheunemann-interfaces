@@ -6,8 +6,7 @@ export class CustomerCreditLimitEntity implements ICustomerCreditLimit {
   public amountUsed: number = 0;
   public currentBalance: number = 0;
   public creditLimit: number = 0;
-  public companyId: string = '';
-  public containerId: string = '';
+  public customerId: string = '';
 
   // #endregion Properties (8)
 
