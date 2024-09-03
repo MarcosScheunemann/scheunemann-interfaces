@@ -8,4 +8,5 @@ export interface IQuestion {
   value: string;
   questionId: string | null;
   level: number | null;
+  tags: string[]
 }

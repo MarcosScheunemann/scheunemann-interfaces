@@ -11,6 +11,7 @@ export class QuestionEntity implements IQuestion {
   public index: number = 0;
   public level: number | null = null;
   public questionId: string | null = null;
+  public tags: string[] = [];
 
   constructor(data?: Partial<QuestionEntity>) {
     if (data) {
