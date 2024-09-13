@@ -4,7 +4,6 @@ import { EVoucherStatus } from '../enums';
 export interface IVoucher {
   // #region Properties (20)
 
-  //TODO opçao de permitir subscription ou invoice
   // se permite ou não a alteração do nome do cupom pelo parceiro
   allowsKeyChange: boolean;
   // valor do desconto (soma do valor de todos os patrocínios - sponsorship)

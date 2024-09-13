@@ -1,3 +1,9 @@
 export enum EPlanIdentifier {
   DEFAULT = 'DEFAULT',
+  BASIC = 'BASIC',
+  STANDARD = 'STANDARD',
+  PREMIUM = 'PREMIUM',
+  ENTERPRISE = 'ENTERPRISE',
+  TRIAL = 'TRIAL',
+  ULTIMATE = 'ULTIMATE',
 }
