@@ -11,6 +11,6 @@ export interface IPagBankCard {
   brand: string;
   product: string;
   first_digits: number;
-  last_digits: number;
-  holder: IPagBankHolder;
+  last_digits?: number;
+  holder?: IPagBankHolder;
 }

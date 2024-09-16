@@ -26,3 +26,11 @@ export { IPagBankSubMerchant } from './i-sub-merchant';
 export { IPagBankSummary } from './i-sumary';
 export { IPagBankTokenData } from './i-token-data';
 export { IPagBankWallet } from './i-wallet';
+export { IPagBankBox } from './i-box';
+export { IPagBankCheckout } from './i-checkout';
+export { IPagBankConfigOption } from './i-config-option';
+export { IPagBankDimension } from './i-dimension';
+export { IPagBankPaymentMethodConfig } from './i-payment-method-config';
+export { IPagBankRawData } from './i-raw-data';
+
+
