@@ -10,3 +10,4 @@ export { EPagBankBrand } from './brand.enum';
 export { EPagBankConfigOption } from './config-option.enum';
 export { EPagBankShippingServiceType } from './shipping-service-type.enum';
 export { EPagBankShippingType } from './shipping-type.enum';
+export { EPagBankRelLink } from './rel-link.enum';
