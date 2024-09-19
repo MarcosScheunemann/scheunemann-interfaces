@@ -6,4 +6,5 @@ export interface ISubscriptionCustomer extends ISubscriptionBase {
   customerCreditLimit: ICustomerCreditLimit[];
   customerId: string | null;
   profile: ICustomerInfo;
+  planName : string
 }

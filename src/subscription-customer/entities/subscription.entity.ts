@@ -9,6 +9,7 @@ export class SubscriptionCustomerEntity extends SubscriptionBaseEntity implement
   public customerCreditLimit: CustomerCreditLimitEntity[] = [];
   public customerId: string | null = null;
   public profile: CustomerInfoEntity = new CustomerInfoEntity();
+  public planName: string = '';
 
 
   constructor(data?: Partial<SubscriptionCustomerEntity>) {
