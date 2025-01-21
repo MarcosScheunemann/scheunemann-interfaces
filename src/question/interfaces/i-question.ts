@@ -1,3 +1,5 @@
+import { EInputTypes } from "../enums/input-types.enum";
+
 export interface IQuestion {
   active: boolean;
   createdAt: Date;
@@ -11,4 +13,5 @@ export interface IQuestion {
   level: number | null;
   tags: string[]
   childrens?: IQuestion[];
+  inputs: EInputTypes[] | null;
 }

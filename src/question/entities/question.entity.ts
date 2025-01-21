@@ -1,3 +1,4 @@
+import { EInputTypes } from '../enums';
 import { IQuestion } from '../interfaces/i-question';
 
 export class QuestionEntity implements IQuestion {
@@ -12,6 +13,7 @@ export class QuestionEntity implements IQuestion {
   public index: number = 0;
   public level: number | null = null;
   public questionIds: string[] | null = null;
+  public inputs: EInputTypes[] | null = null;
   public tags: string[] = [];
 
   constructor(data?: Partial<QuestionEntity>) {
