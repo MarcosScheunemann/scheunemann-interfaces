@@ -10,4 +10,5 @@ export interface IQuestion {
   questionIds: string[] | null;
   level: number | null;
   tags: string[]
+  childrens?: IQuestion[];
 }

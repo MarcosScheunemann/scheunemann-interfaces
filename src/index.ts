@@ -53,4 +53,5 @@ export * from './sponsor';
 export * from './master-setting';
 export * from './question';
 export * from './pag-bank';
+export * from './gpt';
 
