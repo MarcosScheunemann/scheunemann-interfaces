@@ -12,7 +12,11 @@ export class ClaudeContentEntity implements IClaudeContent {
 
     constructor(data?: Partial<ClaudeContentEntity>) {
         if (data) {
-            Object.assign(this, data);
+            for (let key in data) {
+                if (data.hasOwnProperty(key) && key in this) {
+                    (this as any)[key] = (data as any)[key];
+                }
+            }
         }
     }
 } 

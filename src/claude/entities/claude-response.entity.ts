@@ -14,17 +14,11 @@ export class ClaudeResponseEntity implements IClaudeResponse {
 
   constructor(data?: Partial<ClaudeResponseEntity>) {
     if (data) {
-      for (const key in data) {
-        if (data.hasOwnProperty(key) && key in this) {
-          if (key === 'usage') {
-            this.usage = new ClaudeUsageEntity(data.usage);
-          } else if (key === 'content') {
-            this.content = data.content?.map(content => new ClaudeContentEntity(content)) || [];
-          } else {
-            (this as any)[key] = (data as any)[key];
-          }
+        for (let key in data) {
+            if (data.hasOwnProperty(key) && key in this) {
+                (this as any)[key] = (data as any)[key];
+            }
         }
-      }
     }
-  }
+}
 } 

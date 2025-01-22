@@ -7,7 +7,11 @@ export class ClaudeUsageEntity implements IClaudeUsage {
 
   constructor(data?: Partial<ClaudeUsageEntity>) {
     if (data) {
-      Object.assign(this, data);
+        for (let key in data) {
+            if (data.hasOwnProperty(key) && key in this) {
+                (this as any)[key] = (data as any)[key];
+            }
+        }
     }
-  }
+}
 } 
