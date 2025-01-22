@@ -6,6 +6,8 @@ export interface IClaudeResponse {
   id: string;
   model: string;
   role: string;
+  stop_reason: string;
+  stop_sequence: string | null;
   type: string;
   usage: IClaudeUsage;
 } 
