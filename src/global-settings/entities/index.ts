@@ -1,3 +1,4 @@
-export { GlobalSettingIuguEntity } from './global-setting-iugu.entity';
-export { GlobalSettingMasterEntity } from './global-setting-master.entity';
-export { GlobalSettingEntity } from './global-setting.entity';
+export { ClaudeSettingsEntity } from './claude-settings.entity';
+export { GptSettingsEntity } from './gpt-settings.entity';
+export { EmailSettingsEntity } from './email-settings.entity';
+export { InvoiceSettingsEntity } from './invoice-settings.entity';
