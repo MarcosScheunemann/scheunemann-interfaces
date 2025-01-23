@@ -1,5 +1,5 @@
 import { IBase } from '../../general';
-import { MemberRulesEnum, MemberTypeEnum } from '../enums';
+import { EMemberRules, EMemberType } from '../enums';
 
 export interface IMember extends IBase {
   // #region Properties (9)
@@ -14,8 +14,8 @@ export interface IMember extends IBase {
   phoneNumberVerified: boolean;
   phoneNumberVerifiedAt: Date | null;
   photoUrl: string;
-  rule: MemberRulesEnum;
-  type: MemberTypeEnum;
+  rule: EMemberRules;
+  type: EMemberType;
   tags: string[];
   uid: string;
 

@@ -1,5 +1,5 @@
 import { BaseEntity } from '../../general';
-import { MemberRulesEnum, MemberTypeEnum } from '../enums';
+import { EMemberRules, EMemberType } from '../enums';
 import { IMember } from '../interfaces';
 
 export class MemberEntity extends BaseEntity implements IMember {
@@ -16,9 +16,9 @@ export class MemberEntity extends BaseEntity implements IMember {
   public phoneNumberVerified: boolean = false;
   public phoneNumberVerifiedAt: Date | null = null;
   public photoUrl: string = '';
-  public rule: MemberRulesEnum = MemberRulesEnum.USER;
+  public rule: EMemberRules = EMemberRules.USER;
   public tags: string[] = [];
-  public type: MemberTypeEnum = MemberTypeEnum.CLIENT;
+  public type: EMemberType = EMemberType.CLIENT;
   public uid: string = '';
 
   // #endregion Properties (14)

@@ -1,7 +1,8 @@
 import { EPaymentType, PaymentProviderEntity } from '../../general';
+import { CustomerInfoEntity, ICustomerInfo } from '../../master-setting';
 import { IOrder } from '../../order';
 import { EInvoiceStatus } from '../enums';
-import { IInvoice } from '../interfaces';
+import { IInvoice, IInvoiceBankSlip, IInvoiceCreditCard, IInvoiceItem, IInvoiceLog, IInvoicePix } from '../interfaces';
 import { InvoiceBankSlipEntity } from './invoice-bank-slip.entity';
 import { InvoiceCreditCardEntity } from './invoice-credit-card.entity';
 import { InvoiceItemEntity } from './invoice-item.entity';
@@ -11,42 +12,28 @@ import { InvoicePixEntity } from './invoice-pix.entity';
 
 export class InvoiceEntity implements IInvoice {
   // #region Properties (43)
-
-  public addition: number = 0;
-  public bankSlip: InvoiceBankSlipEntity | null = null;
-  public bankSlipExtraDue: number = 3;
-  public ccEmails: string[] = [];
-  public companyId: string = '';
-  public containerId: string = '';
+  public addition: number = 0 ;
+  public bankSlip: IInvoiceBankSlip | null = null;
+  public bankSlipExtraDue: number = 1;
   public createdAt: Date = new Date();
-  public creditCard: InvoiceCreditCardEntity | null = null;
+  public creditCard: IInvoiceCreditCard | null = null;
   public currency: string = 'BRL';
   public customerId: string | null = null;
   public discount: number = 0;
-  public dueDateAt: Date = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
-  public email: string = '';
-  public ensureDueOnWorkday: boolean = true;
+  public email: string | null = null;
   public externalInvoiceId: string = '';
   public externalInvoiceUrl: string = '';
   public id: string = '';
-  public items: InvoiceItemEntity[] = [];
-  public logs: InvoiceLogEntity[] = [];
+  public items: InvoiceItemEntity[] = [new InvoiceItemEntity];
+  public logs: InvoiceLogEntity[] = [new InvoiceLogEntity];
   public notes: string = '';
-  public notificationUrl: string = '';
-  public orderId: string = '';
-  public orders: IOrder[] | null = [];
   public paidAt: Date | null = null;
-  public partnerId: string = '';
-  public password: string | null = null;
-  public payer: InvoicePayerEntity = new InvoicePayerEntity();
+  public expiresAt: Date | null = new Date(this.createdAt.getFullYear(), this.createdAt.getMonth(), this.createdAt.getDate() +1);
+  public payer: ICustomerInfo = new CustomerInfoEntity;
   public paymentMethod: EPaymentType = EPaymentType.NONE;
-  public paymentProvider: PaymentProviderEntity | null = null;
-  public phoneNumbersNotification: string[] = [];
-  public pix: InvoicePixEntity | null = null;
-  public returnExpiredUrl: string = '';
-  public returnUrl: string = '';
+  public pix: IInvoicePix | null = null;
   public sandbox: boolean = false;
-  public status: EInvoiceStatus = EInvoiceStatus.DRAFT;
+  public status: EInvoiceStatus = EInvoiceStatus.PENDING;
   public subTotal: number = 0;
   public subscriptionId: string = '';
   public totalAmount: number = 0;
@@ -54,12 +41,9 @@ export class InvoiceEntity implements IInvoice {
   public totalOverPaid: number = 0;
   public totalPaid: number = 0;
   public totalRefunded: number = 0;
-  public updatedAt: Date = new Date();
-
-  // #endregion Properties (43)
-
-  // #region Constructors (1)
-
+  public updatedAt: Date = this.createdAt;
+  public notificationUrl: string = '';
+  public returnUrl: string = '';
   constructor(data?: Partial<InvoiceEntity>) {
     if (data) {
       for (let key in data) {
@@ -69,6 +53,7 @@ export class InvoiceEntity implements IInvoice {
       }
     }
   }
+
 
   // #endregion Constructors (1)
 }

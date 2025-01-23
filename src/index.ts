@@ -42,7 +42,6 @@ export * from './subscription-company';
 export * from './subscription-customer';
 export * from './token';
 export * from './token-jwt';
-// export * from './v1-entities'; // importacoes das tabelas do nati V1
 export * from './transaction';
 export * from './verifier-token';
 export * from './viacep';
@@ -51,3 +50,10 @@ export * from './wa-server';
 export * from './withdraw';
 export * from './logss';
 export * from './sponsor';
+export * from './master-setting';
+export * from './question';
+export * from './pag-bank';
+export * from './gpt';
+export * from './envelope';
+export * from './claude';
+

@@ -1,6 +1,6 @@
 {
     "name": "scheunemann-interfaces",
-    "version": "1.0.0",
+    "version": "1.1.8",
     "description": "Interfaces de Projetos Scheunemann",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "scripts": {
         "packagr": "ng-packagr -p ng-package.json",
         "build": "tsc src/index.ts --outDir dist",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "deploy": "npm run packagr && npm run build && npm publish"
     },
     "repository": {
         "type": "git",

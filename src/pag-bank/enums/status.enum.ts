@@ -1,0 +1,8 @@
+export enum EPagBankStatus {
+  AUTHORIZED = 'AUTHORIZED',
+  PAID = 'PAID',
+  IN_ANALYSIS = 'IN_ANALYSIS',
+  DECLINED = 'DECLINED',
+  CANCELED = 'CANCELED',
+  WAITING = 'WAITING',
+}

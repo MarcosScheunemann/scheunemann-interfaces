@@ -1,5 +1,4 @@
 export enum ECustomerStatus {
   BLOCKED = 'BLOCKED',
   ACTIVE = 'ACTIVE',
-  WAITING_CREDIT_ANALYSIS = 'WAITING_CREDIT_ANALYSIS',
 }

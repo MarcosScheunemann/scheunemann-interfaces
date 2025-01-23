@@ -1,4 +1,4 @@
-export enum MemberRulesEnum {
+export enum EMemberRules {
   ADMIN = 'ADMIN',
   USER = 'USER',
   OWNER = 'OWNER',
