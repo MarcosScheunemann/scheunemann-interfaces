@@ -10,6 +10,7 @@ public blockedReason: string | null = null;
 public status: ECustomerStatus = ECustomerStatus.ACTIVE;
 public subscription: ISubscriptionCustomer | null = null;
 public subscriptionId: string | null = null;
+public pass: string | null = null
  
 
 constructor(data?: Partial<CustomerIbChainEntity>) {
