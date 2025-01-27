@@ -6,5 +6,8 @@ export interface ICustomerInfo {
     name: string | null;
     email: string | null;
     phoneNumber: string | null;
-    type:EMemberType
+    type:EMemberType;
+    emailVerified: boolean,
+    emailVerifiedAt: Date | null,
+
 }
