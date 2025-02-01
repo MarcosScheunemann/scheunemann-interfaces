@@ -1,0 +1,6 @@
+export enum ECustomVariables {
+  ID = 'ID',
+  CUSTOM_FOOTER = 'CUSTOM_FOOTER',
+  SECOND_OPINION = 'SECOND_OPINION',
+  CAN_ATTACH_FILES = 'CAN_ATTACH_FILES',
+}
