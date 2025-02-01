@@ -3,4 +3,5 @@ export interface ICustomerCreditLimit {
   currentBalance: number;
   creditLimit: number;
   customerId: string;
+  type: string
 }

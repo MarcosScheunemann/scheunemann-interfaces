@@ -1,3 +1,4 @@
+import { ECustomerCreditLimitType } from '../enums/type.enum';
 import { ICustomerCreditLimit } from '../interfaces/i-customer-credit-limit';
 
 export class CustomerCreditLimitEntity implements ICustomerCreditLimit {
@@ -7,6 +8,7 @@ export class CustomerCreditLimitEntity implements ICustomerCreditLimit {
   public currentBalance: number = 0;
   public creditLimit: number = 0;
   public customerId: string = '';
+  public type: ECustomerCreditLimitType = ECustomerCreditLimitType.RESETTABLE
 
   // #endregion Properties (8)
 
