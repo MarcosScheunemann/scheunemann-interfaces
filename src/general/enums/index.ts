@@ -17,3 +17,5 @@ export { EPlatform } from './platform.enum';
 export { EPaymentProvider } from './providers.enum';
 export { EPubSub } from './pubsub.enum';
 export { ESponsorshipValues } from './sponsorship-values.enum';
+export { ECustomVariables } from './custom-var.enum';
+

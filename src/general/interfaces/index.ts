@@ -23,3 +23,4 @@ export { IPaymentTokenData } from './i-payment-token-data';
 export { IPaymentWallet } from './i-payment-wallet';
 export { IRating } from './i-rating';
 export { ISponsorshipValue } from './i-sponsorship-value';
+export {PLAN_VARIABLES} from './plan-custom-var'
