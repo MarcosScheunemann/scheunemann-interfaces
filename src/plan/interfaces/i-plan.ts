@@ -3,7 +3,9 @@ import { EPlanIdentifier } from '../enums';
 import { IPlanFeature } from './i-feature';
 
 export interface IPlan {
+  active: boolean;
   createdAt: Date;
+  name: string;
   features: IPlanFeature[];
   id: string;
   identifier: EPlanIdentifier;
@@ -11,14 +13,8 @@ export interface IPlan {
   interval: number;
   intervalType: EIntervalType;
   tags: string[];
-  name: string;
   trialDays: number;
   price: number;
   updatedAt: Date;
-
-  // Permite mais de um plano para o mesmo app ou apenas um plano para o app
-  // Criar campo para definir a quantidade possível de planos por app
-  // Se for 1, o app terá apenas um plano, se for 0, o app terá mais de um plano
-  // Se for 0, criar campo para definir o plano padrão
-
+  isRecommended: boolean;
 }

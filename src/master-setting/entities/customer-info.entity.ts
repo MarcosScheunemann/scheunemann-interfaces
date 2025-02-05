@@ -6,7 +6,7 @@ import { ICustomerInfo } from '../interfaces/i-customer-info';
 export class CustomerInfoEntity implements ICustomerInfo {
   // #region Properties (6)
 
-  public tokenId: string = '';
+  public tokenId: string | null = '';
   public customerId: string = '';
   public name: string | null = '';
   public email: string | null = '';
