@@ -18,6 +18,8 @@ export class PlanEntity implements IPlan {
   public tags: string[] = [];
   public trialDays: number = 0;
   public updatedAt: Date = new Date();
+  public active: boolean = false;
+  public isRecommended: boolean = false;
 
   // #endregion Properties (12)
 
