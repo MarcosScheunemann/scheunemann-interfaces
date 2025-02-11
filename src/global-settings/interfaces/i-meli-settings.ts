@@ -1,6 +1,6 @@
 import { EGlobalSettingsType } from "../enums/global-settings-type.enum";
 
-export interface IMercadoPagoSettings {
+export interface IMeliSettings {
     accessToken: string;
     acessToken_test: string;
     public_key: string;
