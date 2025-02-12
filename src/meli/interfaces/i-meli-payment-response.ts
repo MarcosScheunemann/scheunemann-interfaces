@@ -33,6 +33,7 @@ export interface IMeliPaymentResponse {
     issuer_id: string;
     live_mode: boolean;
     money_release_date: Date;
+    money_release_status: string;
     notification_url?: string;
     operation_type: string;
     order: {
