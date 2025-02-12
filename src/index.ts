@@ -25,7 +25,7 @@ export * from './member';
 export * from './mobyo';
 export * from './monitor';
 export * from './mottu';
-export * from './nati-v1';
+export * from './meli';
 export * from './notification';
 export * from './order';
 export * from './partner';
