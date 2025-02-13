@@ -24,8 +24,8 @@ export class InvoiceEntity implements IInvoice {
   public externalInvoiceId: string = '';
   public externalInvoiceUrl: string = '';
   public id: string = '';
-  public items: InvoiceItemEntity[] = [new InvoiceItemEntity];
-  public logs: InvoiceLogEntity[] = [new InvoiceLogEntity];
+  public items: InvoiceItemEntity[] = [];
+  public logs: InvoiceLogEntity[] = [];
   public notes: string = '';
   public paidAt: Date | null = null;
   public expiresAt: Date | null = new Date(this.createdAt.getFullYear(), this.createdAt.getMonth(), this.createdAt.getDate() +1);
