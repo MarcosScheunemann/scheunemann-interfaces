@@ -1,7 +1,4 @@
-import { IBlueSoft } from '../../bluesoft';
-import { IBlueSoftGtin } from '../../bluesoft/interfaces/i-bluesoft-gtin';
 import { GTINTypeEnum } from '../enums';
-import { EGtintype } from '../enums/gtin-type.enum';
 import { IProductGlobal } from '../interfaces';
 import { ProductBrandEntity } from './product-brand.entity';
 import { ProductNcmEntity } from './product-ncm.entity';
@@ -40,34 +37,7 @@ export class ProductGlobalEntity implements IProductGlobal {
 
   // #region Constructors (1)
 
-  constructor(data?: Partial<ProductGlobalEntity>, bluesoft?: IBlueSoft) {
-    if (bluesoft) {
-      this.active = true;
-      this.avgPrice = bluesoft.avgPrice;
-      this.barcodeImage = bluesoft.barcodeImage;
-      this.brand = new ProductBrandEntity(bluesoft.brand);
-      this.cest = '';
-      this.createdAt = new Date();
-      this.description = bluesoft.description;
-      this.grossWeight = bluesoft.grossWeight || 0;
-      this.gtin = bluesoft.gtin || null;
-      this.gtinType = EGtintype.FOURTEEN;
-      this.height = bluesoft.height || 0;
-      this.id = '';
-      this.length = bluesoft.length || 0;
-      this.maxPrice = bluesoft.maxPrice || 0;
-      this.measureQuantity = this.getGtinFromGtins(bluesoft.gtin || 0, bluesoft.gtins)?.commercialUnit?.quantityPackaging || 1;
-      this.measureUnit = this.getGtinFromGtins(bluesoft.gtin || 0, bluesoft.gtins)?.commercialUnit?.typePackaging || 'Unidade';
-      this.minPrice = bluesoft.minPrice || 0;
-      this.name = bluesoft.description || '';
-      this.ncm = new ProductNcmEntity(bluesoft.ncm);
-      this.netWeight = bluesoft.netWeight || 0;
-      this.price = this.currencyStringToNumber(bluesoft.price);
-      this.tags = [];
-      this.thumbnail = bluesoft.thumbnail || '';
-      this.updatedAt = new Date();
-      this.width = bluesoft.width || 0;
-    }
+  constructor(data?: Partial<ProductGlobalEntity>) {
     if (data) {
       for (let key in data) {
         if (data.hasOwnProperty(key) && key in this) {
@@ -77,21 +47,4 @@ export class ProductGlobalEntity implements IProductGlobal {
     }
   }
 
-  // #endregion Constructors (1)
-
-  // #region Private Methods (1)
-
-  private getGtinFromGtins(ref: number, gtins: IBlueSoftGtin[]): IBlueSoftGtin | null {
-    for (let i = 0; i < gtins.length; i++) {
-      if (gtins[i].gtin === ref) {
-        return gtins[i];
-      }
-    }
-    return null;
-  }
-  private currencyStringToNumber(value: string): number {
-    return Number(value.replace(/[^0-9.-]+/g, ''));
-  }
-
-  // #endregion Private Methods (1)
 }
