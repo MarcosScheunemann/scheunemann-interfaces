@@ -4,7 +4,6 @@ import { IMember } from '../interfaces';
 
 export class MemberEntity extends BaseEntity implements IMember {
   // #region Properties (14)
-
   public active: boolean = true;
   public companyName: string = '';
   public containerName: string = '';
@@ -20,7 +19,8 @@ export class MemberEntity extends BaseEntity implements IMember {
   public tags: string[] = [];
   public type: EMemberType = EMemberType.CLIENT;
   public uid: string = '';
-
+  public companyId: string = '';
+  public containerId: string = '';
   // #endregion Properties (14)
 
   // #region Constructors (1)

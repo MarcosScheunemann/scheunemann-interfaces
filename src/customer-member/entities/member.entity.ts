@@ -5,7 +5,8 @@ export class CustomerMemberEntity extends MemberEntity implements ICustomerMembe
   // #region Properties (1)
 
   public customerId: string = '';
-
+  public companyId: string = '';
+  public containerId: string = '';
   // #endregion Properties (1)
 
   // #region Constructors (1)

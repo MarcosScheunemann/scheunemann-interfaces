@@ -1,18 +1,15 @@
-// src/models/base.entity.ts
+import { IQuestion } from "../../question";
+import { IHistory } from "../interfaces";
 
-export class BaseEntity {
-  // #region Properties (6)
-
-  public active: boolean = true;
+export class HistoryEntity implements IHistory {
+  // #region Properties (12)
   public createdAt: Date = new Date();
   public updatedAt: Date = new Date();
   public id: string = '';
+  public active: boolean = true;
+  public question: IQuestion | null = null;
 
-  // #endregion Properties (6)
-
-  // #region Constructors (1)
-
-  constructor(data?: Partial<BaseEntity>) {
+  constructor(data?: Partial<HistoryEntity>) {
     if (data) {
       for (let key in data) {
         if (data.hasOwnProperty(key) && key in this) {
