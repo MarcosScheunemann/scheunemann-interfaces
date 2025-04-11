@@ -1,6 +1,6 @@
 {
   "name": "scheunemann-interfaces",
-  "version": "1.2.30",
+  "version": "1.2.31",
   "description": "Interfaces de Projetos Scheunemann",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
