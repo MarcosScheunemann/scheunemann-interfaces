@@ -378,7 +378,9 @@ export class AuthService {
     private handlerFirebaseError(error: any): never {
         const errorCode = error.code || error.message;  // Usando o code, se estiver presente, senão usa a message.
     
-        const errorsMap = {
+        const errorsMap:{
+            [key: string]: string;
+        } = {
             [ErrorCodesEnum.userNotFound]: 'Conta não encontrada! 9847',
             [ErrorCodesEnum.manyAttempts]: 'Muitas tentativas de login. Tente novamente mais tarde.',
             [ErrorCodesEnum.wrongPassword]: 'Senha incorreta. Verifique e tente novamente.',
