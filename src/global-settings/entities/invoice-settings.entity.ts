@@ -2,8 +2,8 @@ import { EGlobalSettingsType } from '../enums/global-settings-type.enum';
 import { IInvoiceSettings } from '../interfaces/i-invoice-settings';
 
 export class InvoiceSettingsEntity implements IInvoiceSettings {
-    public active: boolean = false;
-    public billingDays: number = 0;
+    public active: boolean = true;
+    public billingDays: number = 6;
     public createdAt: Date = new Date();
     public id: string = '';
     public type: EGlobalSettingsType = EGlobalSettingsType.INVOICE_CONFIG;

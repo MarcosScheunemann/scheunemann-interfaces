@@ -1,5 +1,6 @@
 import { EPaymentType, IPaymentProvider } from '../../general';
 import { ICustomerInfo } from '../../master-setting';
+import { IMeliPreferences } from '../../meli/interfaces/i-meli-preferences';
 import { IOrder } from '../../order';
 import { EInvoiceStatus } from '../enums';
 import { IInvoiceBankSlip } from './i-invoice-bank-slip';
@@ -43,4 +44,5 @@ export interface IInvoice {
   updatedAt: Date;
   notificationUrl: string;
   returnUrl: string;
+  checkout: IMeliPreferences | null;
 }

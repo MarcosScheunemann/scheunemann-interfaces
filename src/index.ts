@@ -1,7 +1,6 @@
 export * from './app';
-export * from './billing';
-export * from './billing-order';
-export * from './bluesoft';
+export * from './history';
+export * from './clause-theme';
 export * from './campaign';
 export * from './clients';
 export * from './company';
@@ -25,7 +24,7 @@ export * from './member';
 export * from './mobyo';
 export * from './monitor';
 export * from './mottu';
-export * from './nati-v1';
+export * from './meli';
 export * from './notification';
 export * from './order';
 export * from './partner';
@@ -56,4 +55,4 @@ export * from './pag-bank';
 export * from './gpt';
 export * from './envelope';
 export * from './claude';
-
+export * from './g-news';

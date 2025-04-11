@@ -1,18 +1,14 @@
-import { EPaymentType, PaymentProviderEntity } from '../../general';
+import { EPaymentType } from '../../general';
 import { CustomerInfoEntity, ICustomerInfo } from '../../master-setting';
-import { IOrder } from '../../order';
+import { IMeliPreferences } from '../../meli/interfaces/i-meli-preferences';
 import { EInvoiceStatus } from '../enums';
-import { IInvoice, IInvoiceBankSlip, IInvoiceCreditCard, IInvoiceItem, IInvoiceLog, IInvoicePix } from '../interfaces';
-import { InvoiceBankSlipEntity } from './invoice-bank-slip.entity';
-import { InvoiceCreditCardEntity } from './invoice-credit-card.entity';
+import { IInvoice, IInvoiceBankSlip, IInvoiceCreditCard, IInvoicePix } from '../interfaces';
 import { InvoiceItemEntity } from './invoice-item.entity';
 import { InvoiceLogEntity } from './invoice-log.entity';
-import { InvoicePayerEntity } from './invoice-payer.entity';
-import { InvoicePixEntity } from './invoice-pix.entity';
 
 export class InvoiceEntity implements IInvoice {
   // #region Properties (43)
-  public addition: number = 0 ;
+  public addition: number = 0;
   public bankSlip: IInvoiceBankSlip | null = null;
   public bankSlipExtraDue: number = 1;
   public createdAt: Date = new Date();
@@ -24,12 +20,12 @@ export class InvoiceEntity implements IInvoice {
   public externalInvoiceId: string = '';
   public externalInvoiceUrl: string = '';
   public id: string = '';
-  public items: InvoiceItemEntity[] = [new InvoiceItemEntity];
-  public logs: InvoiceLogEntity[] = [new InvoiceLogEntity];
+  public items: InvoiceItemEntity[] = [];
+  public logs: InvoiceLogEntity[] = [];
   public notes: string = '';
   public paidAt: Date | null = null;
-  public expiresAt: Date | null = new Date(this.createdAt.getFullYear(), this.createdAt.getMonth(), this.createdAt.getDate() +1);
-  public payer: ICustomerInfo = new CustomerInfoEntity;
+  public expiresAt: Date | null = new Date(this.createdAt.getFullYear(), this.createdAt.getMonth(), this.createdAt.getDate() + 1);
+  public payer: ICustomerInfo = new CustomerInfoEntity();
   public paymentMethod: EPaymentType = EPaymentType.NONE;
   public pix: IInvoicePix | null = null;
   public sandbox: boolean = false;
@@ -44,6 +40,7 @@ export class InvoiceEntity implements IInvoice {
   public updatedAt: Date = this.createdAt;
   public notificationUrl: string = '';
   public returnUrl: string = '';
+  public checkout: IMeliPreferences | null = null;
   constructor(data?: Partial<InvoiceEntity>) {
     if (data) {
       for (let key in data) {
@@ -53,7 +50,6 @@ export class InvoiceEntity implements IInvoice {
       }
     }
   }
-
 
   // #endregion Constructors (1)
 }

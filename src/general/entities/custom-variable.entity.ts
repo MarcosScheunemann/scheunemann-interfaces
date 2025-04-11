@@ -1,8 +1,10 @@
-export class CustomVariableEntity {
+import { ICustomVariable } from '../interfaces';
+
+export class CustomVariableEntity implements ICustomVariable {
   // #region Properties (2)
 
-  public name: string = "";
-  public value: string = "";
+  public name: string = '';
+  public value: string | Date | boolean = '';
 
   // #endregion Properties (2)
 

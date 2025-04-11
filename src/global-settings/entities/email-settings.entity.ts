@@ -11,6 +11,8 @@ export class EmailSettingsEntity implements IEmailSettings {
     public service: string = 'outlook';
     public type: EGlobalSettingsType = EGlobalSettingsType.EMAIL_DEFAULT;
     public updatedAt: Date = new Date();
+    public host: string = '';
+    public port: number = 0;
 
     constructor(data?: Partial<EmailSettingsEntity>) {
         if (data) {

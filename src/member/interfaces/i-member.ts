@@ -18,6 +18,8 @@ export interface IMember extends IBase {
   type: EMemberType;
   tags: string[];
   uid: string;
+  companyId: string;
+  containerId: string;
 
   // #endregion Properties (9)
 }
