@@ -22,5 +22,4 @@ export class BaseEntity {
     }
   }
 
-  // #endregion Constructors (1)
 }

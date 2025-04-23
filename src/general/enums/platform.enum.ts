@@ -1,9 +1,9 @@
 export enum EPlatform {
-  MOBILE = 'Mobile',
-  WEB = 'Web',
-  DESKTOP = 'Desktop',
-  TABLET = 'Tablet',
-  TV = 'Tv',
-  CHROMEBOOK = 'Chromebook',
-  OTHER = 'Other',
+  MOBILE = 'MOBILE',
+  WEB = 'WEB',
+  DESKTOP = 'DESKTOP',
+  TABLET = 'TABLET',
+  TV = 'TV',
+  CHROMEBOOK = 'CHROMEBOOK',
+  OTHER = 'OTHER',
 }
