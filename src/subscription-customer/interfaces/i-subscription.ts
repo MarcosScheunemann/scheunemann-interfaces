@@ -8,4 +8,5 @@ export interface ISubscriptionCustomer extends ISubscriptionBase {
   profile: ICustomerInfo;
   planName: string;
   emailsNotification: string[];
+  renewedCount: number;
 }
