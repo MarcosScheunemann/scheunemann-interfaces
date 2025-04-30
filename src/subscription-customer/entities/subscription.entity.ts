@@ -11,6 +11,7 @@ export class SubscriptionCustomerEntity extends SubscriptionBaseEntity implement
   public profile: CustomerInfoEntity = new CustomerInfoEntity();
   public planName: string = '';
   public emailsNotification: string[] = [];
+  public renewedCount: number = 0;
 
   constructor(data?: Partial<SubscriptionCustomerEntity>) {
     super(data);
