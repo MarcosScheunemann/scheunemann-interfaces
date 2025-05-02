@@ -4,4 +4,5 @@ export enum EGlobalSettingsType {
     INVOICE_CONFIG = 'INVOICE_CONFIG',
     CHATGPT_CONFIG = 'CHATGPT_CONFIG',
     MELI_CONFIG = 'MELI_CONFIG',
+    GOOGLE_AUTH = 'GOOGLE_AUTH'
 }

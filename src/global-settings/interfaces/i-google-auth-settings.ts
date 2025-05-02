@@ -1,4 +1,5 @@
 import { IBase } from '../../general';
+import { EGlobalSettingsType } from '../enums';
 
 export interface IGoogleAuthSettings extends IBase {
   authProviderX509CertUrl: string;
@@ -8,4 +9,5 @@ export interface IGoogleAuthSettings extends IBase {
   javascriptOrigins: string[];
   redirectUris: string[];
   tokenUri: string;
+  type: EGlobalSettingsType
 }

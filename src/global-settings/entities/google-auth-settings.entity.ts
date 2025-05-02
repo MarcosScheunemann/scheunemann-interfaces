@@ -1,4 +1,5 @@
 import { BaseEntity } from '../../general';
+import { EGlobalSettingsType } from '../enums';
 import { IGoogleAuthSettings } from '../interfaces';
 
 export class GoogleAuthSettingsEntity extends BaseEntity implements IGoogleAuthSettings {
@@ -9,6 +10,7 @@ export class GoogleAuthSettingsEntity extends BaseEntity implements IGoogleAuthS
   javascriptOrigins: string[] = [];
   redirectUris: string[] = [];
   tokenUri: string = '';
+  type: EGlobalSettingsType = EGlobalSettingsType.GOOGLE_AUTH;
 
   constructor(data?: Partial<GoogleAuthSettingsEntity>) {
     super(data);
