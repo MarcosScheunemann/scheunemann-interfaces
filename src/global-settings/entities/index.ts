@@ -3,3 +3,4 @@ export { GptSettingsEntity } from './gpt-settings.entity';
 export { EmailSettingsEntity } from './email-settings.entity';
 export { InvoiceSettingsEntity } from './invoice-settings.entity';
 export { MeliSettingsEntity } from './meli-settings.entity';
+export { GoogleAuthSettingsEntity } from './google-auth-settings.entity';

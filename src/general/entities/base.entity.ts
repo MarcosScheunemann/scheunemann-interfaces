@@ -1,16 +1,12 @@
-// src/models/base.entity.ts
+import { IBase } from "../interfaces";
 
-export class BaseEntity {
+export class BaseEntity implements IBase{
   // #region Properties (6)
 
   public active: boolean = true;
   public createdAt: Date = new Date();
   public updatedAt: Date = new Date();
   public id: string = '';
-
-  // #endregion Properties (6)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<BaseEntity>) {
     if (data) {
