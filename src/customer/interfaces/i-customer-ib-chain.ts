@@ -11,5 +11,6 @@ export interface ICustomerIbChain extends ICustomer {
 
   pass: string | null
 
+  onboardingAt: Date | null
   lastAccessAt: Date | null
 }

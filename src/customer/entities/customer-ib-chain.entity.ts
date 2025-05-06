@@ -9,6 +9,7 @@ export class CustomerIbChainEntity extends CustomerEntity implements ICustomerIb
   public subscription: ISubscriptionCustomer | null = null;
   public subscriptionId: string | null = null;
   public pass: string | null = null;
+  public onboardingAt: Date | null = null;
   public lastAccessAt: Date | null = null;
 
   constructor(data?: Partial<CustomerIbChainEntity>) {
