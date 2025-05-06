@@ -10,4 +10,6 @@ export interface ICustomerIbChain extends ICustomer {
   subscriptionId: string | null;
 
   pass: string | null
+
+  lastAccessAt: Date | null
 }
