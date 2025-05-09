@@ -3,7 +3,6 @@ import { EMemberType } from '../../member';
 import { ICustomer } from '../interfaces';
 
 export class CustomerEntity implements ICustomer {
-  
   sandbox: boolean = false;
   address: IAddress | null = null;
   createdAt: Date = new Date();

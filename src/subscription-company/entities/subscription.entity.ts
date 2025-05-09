@@ -1,4 +1,5 @@
 import { FeatureEntity } from '../../feature';
+import { BaseEntity } from '../../general';
 import { SubscriptionBaseEntity } from '../../subscription-base/entities/subscription-base.entity';
 import { ISubscriptionCompany } from '../interfaces/i-subscription';
 import { SubscriptionCompanyProfileEntity } from './subscription-profile.entity';

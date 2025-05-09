@@ -1,18 +1,13 @@
-import { EDocType, IAddress } from '../../general';
+import { IAddress } from '../../general';
 import { EMemberType } from '../../member';
+import { ICustomerData } from './i-customer-data';
 
-export interface ICustomer {
+export interface ICustomer extends ICustomerData {
   sandbox: boolean;
   address: IAddress | null;
   createdAt: Date;
-  doc: string;
-  docType: EDocType;
-  email: string;
   id: string;
-  internationalCode: string;
-  phoneNumber: string;
   imageUrl: string | null;
-  name: string;
   tags: string[];
   updatedAt: Date;
   type: EMemberType;

@@ -1,16 +1,14 @@
-import { EIntervalType, EPaymentType, ICustomVariable, IPayment } from '../../general';
+import { EIntervalType, EPaymentType, IBase, ICustomVariable, IPayment } from '../../general';
 import { IInvoice } from '../../invoice';
 import { ESubscriptionStatus } from '../enums';
 import { ISubscriptionBaseItem } from './i-subscription-base-item';
 import { ISubscriptionBaseLog } from './i-subscription-base-log';
 
-export interface ISubscriptionBase {
+export interface ISubscriptionBase extends IBase{
   amount: number;
   cancellationReason: string;
-  createdAt: Date;
   customVariables: ICustomVariable[];
   expiresAt: Date;
-  id: string;
   interval: number;
   intervalType: EIntervalType;
   invoices: IInvoice[];
@@ -22,6 +20,5 @@ export interface ISubscriptionBase {
   startsAt: Date;
   status: ESubscriptionStatus;
   tags: string[];
-  updatedAt: Date;
   suspendedTimes?: number;
 }
