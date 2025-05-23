@@ -1,4 +1,3 @@
-import { EChatGeminiModel } from '../enums/model.enum';
 import { IChatGeminiResponse } from '../interfaces';
 
 export class ChatGeminiResponseEntity implements IChatGeminiResponse {
