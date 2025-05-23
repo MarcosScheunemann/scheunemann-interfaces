@@ -1,4 +1,3 @@
-import { EChatGptEndpoints } from "../enums";
 import { EGlobalSettingsType } from "../enums/global-settings-type.enum";
 
 export interface IChatGeminiSettings {
@@ -8,6 +7,6 @@ export interface IChatGeminiSettings {
     apiKey: string;
     apiUrl: string;
     type: EGlobalSettingsType;
-    endpoints: EChatGptEndpoints[];
+    endpoints: [];
     updatedAt: Date;
 }
