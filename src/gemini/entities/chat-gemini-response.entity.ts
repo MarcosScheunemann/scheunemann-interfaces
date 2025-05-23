@@ -4,10 +4,9 @@ import { ChatGeminiUsageEntity } from './chat-gemini-usage.entity';
 
 export class ChatGeminiResponseEntity implements IChatGeminiResponse {
 
-  usageMetadata: IChatGeminiUsage = new ChatGeminiUsageEntity();
-  candidates: any[] = [];
-  promptFeedback: any = ''
-  
+  usage: IChatGeminiUsage = new ChatGeminiUsageEntity();
+  text: string = '';
+
   constructor(data?: Partial<ChatGeminiResponseEntity>) {
     if (data) {
       for (let key in data) {
