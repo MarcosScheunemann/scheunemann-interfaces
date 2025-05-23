@@ -1,8 +1,10 @@
 import { IChatGeminiResponse } from '../interfaces';
+import { IChatGeminiUsage } from '../interfaces/i-chat-gpt-usage';
+import { ChatGeminiUsageEntity } from './chat-gemini-usage.entity';
 
 export class ChatGeminiResponseEntity implements IChatGeminiResponse {
-
-
+  
+  usage: IChatGeminiUsage = new ChatGeminiUsageEntity();
 
   constructor(data?: Partial<ChatGeminiResponseEntity>) {
     if (data) {
