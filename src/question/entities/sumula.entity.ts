@@ -1,23 +1,15 @@
-import { EThirdLevelCases, ETributeTax } from '../enums';
+import { BaseEntity } from '../../general';
+import { ETributeTax } from '../enums';
 import { ISumula } from '../interfaces';
 
-export class SumulaEntity implements ISumula {
-  // #region Properties (5)
-
-  public id: string = '';
+export class SumulaEntity extends BaseEntity implements ISumula {
   public description: string = '';
   public name: string = '';
-  public thrirdLevelCase: EThirdLevelCases = EThirdLevelCases.REPETICAO_INDEBITO;
+  public questionId: string = '';
   public taxCase: ETributeTax = ETributeTax.IRPF;
-  public createdAt: Date = new Date();
-  public updatedAt: Date = new Date();
-  public active: boolean = true;
-
-  // #endregion Properties (5)
-
-  // #region Constructors (1)
 
   constructor(data?: Partial<SumulaEntity>) {
+    super(data);
     if (data) {
       for (let key in data) {
         if (data.hasOwnProperty(key) && key in this) {
@@ -26,6 +18,4 @@ export class SumulaEntity implements ISumula {
       }
     }
   }
-
-  // #endregion Constructors (1)
 }
