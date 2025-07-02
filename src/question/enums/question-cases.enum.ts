@@ -1,4 +1,5 @@
 export enum EQuestionCases {
   DEFAULT = `DEFAULT`,
   HTML_TRANSFORM = `HTML_TRANSFORM`,
+  JURISPRUDENCE = `JURISPRUDENCE`
 }
