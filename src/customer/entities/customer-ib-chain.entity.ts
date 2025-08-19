@@ -1,7 +1,8 @@
 import { ISubscriptionCustomer } from '../../subscription-customer';
 import { ECustomerStatus } from '../enums';
-import { ICustomerIbChain } from '../interfaces';
+import { ICustomerIbChain, ITermsAndPrivacy } from '../interfaces';
 import { CustomerEntity } from './customer.entity';
+import { TermsAndPrivacyEntity } from './terms-and-pricacy.entity';
 
 export class CustomerIbChainEntity extends CustomerEntity implements ICustomerIbChain {
   public blockedReason: string | null = null;
@@ -11,6 +12,7 @@ export class CustomerIbChainEntity extends CustomerEntity implements ICustomerIb
   public pass: string | null = null;
   public onboardingAt: Date | null = null;
   public lastAccessAt: Date | null = null;
+  public termsAndPrivacy: ITermsAndPrivacy = new TermsAndPrivacyEntity()
 
   constructor(data?: Partial<CustomerIbChainEntity>) {
     super(data);
