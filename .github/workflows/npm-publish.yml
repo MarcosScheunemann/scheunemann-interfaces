@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   bump-and-publish:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
@@ -17,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 24
           registry-url: 'https://registry.npmjs.org/'
 
       - name: Configure Git user
@@ -35,8 +39,6 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
           git add package.json
           git commit -m "chore: bump version [skip ci]"
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
@@ -44,5 +46,3 @@ jobs:
 
       - name: Build and Publish
         run: npm run deploy
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
